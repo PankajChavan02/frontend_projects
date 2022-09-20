@@ -1,0 +1,11 @@
+@mixin fun($h:200px,$w:300px){
+    height: $h;
+    width: $w;
+    background-color: lightskyblue;
+    color: brown;
+    font-size: 40px;
+    padding: 5%;
+};
+
+
+

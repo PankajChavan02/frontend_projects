@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fade in out toggle</title>        
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#1").click(function(){
+                    $("#div1").fadeIn(1000)
+                })
+                $("#2").click(function(){
+                    $("#div1").fadeOut(1000)
+                })
+                $("#3").click(function(){
+                    $("#div1").fadeToggle(1000)
+                })
+            })
+        </script>
+        <style>
+            input{
+                margin: 3%;
+            }
+            #div1{
+                height: 100px;
+                width: 120px;
+                border: 1px solid black;
+                background-color: lightskyblue;
+                padding: 5%;
+                margin-left: 5%;
+            }
+        </style>
+        
+    </head>
+    <body>
+        
+        <input type="button" id="1" value="Fade In"><input type="button" id="2" value="Fade out"><input type="button" id="3" value="Fade toggle">
+        <br/><br/>
+        <div id="div1">Hello there</div>
+        
+    </body>
+</html>

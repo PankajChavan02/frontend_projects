@@ -1,0 +1,8 @@
+@forward "_base" as list-*;
+@use "_base" as d;
+
+.div1{
+    @include d-size;
+    background-color: yellowgreen;    
+    float: left;
+}

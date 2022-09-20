@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Input contents</title>
+    </head>
+    <body>
+        <fieldset style="width: 40%; background-color: bisque; align-items: center;">
+            <legend>HTML5 Form</legend>
+          <form style="align-content: center;">
+              <table  style="align-content: center;">
+                <tr>
+                    <td colspan="1"></td>
+                    <td colspan="3"></td>
+                </tr>
+                  <tr>
+                      <td colspan="1"> Name  : </td>
+                      <td colspan="3"><input type="text" placeholder="enter full name"  autocomplete="username" ></td>
+                  </tr>
+                  <tr>
+                    <td colspan="1"> Email :  </td>
+                    <td colspan="3"> <input type="email"  autocomplete="email"  placeholder="abc@gmail.com"></td>
+                </tr>
+                <tr>
+                    <td colspan="1"> URL   :  </td>
+                    <td colspan="3"><input type="url" placeholder="https://abc.com" ></td>
+                </tr>
+                <tr>
+                    <td colspan="1"> Password:   </td>
+                    <td colspan="3"><input type="password" placeholder="enter passowrd"></td>
+                </tr>
+                <tr>
+                    <td colspan="1">   Date    :   </td>
+                    <td colspan="3"><input type="date" min="2021-08-01" max="2021-08-31" value="2021-08-17" ></td>
+                </tr>
+                <tr>
+                    <td colspan="1"> Month    :   </td>
+                    <td colspan="3"><input type="month" min="2021-3" max="2021-10" value="2021-08" ></td>
+                </tr>
+                <tr>
+                    <td colspan="1"> Time    :   </td>
+                    <td colspan="3"><input type="time" value="13:00"  ></td>
+                </tr>
+                <tr>
+                    <td colspan="1">  File    :   </td>
+                    <td colspan="3"><input type="file" ></td>
+                </tr>
+                <tr>
+                    <td colspan="1">City    :   </td>
+                    <td colspan="3"> <select >
+                        <option name="s" >select</option>
+                        <option name="s" >Pune</option>
+                        <option name="s" >Gandhinagar</option>
+                        <option>Hyderabad</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td colspan="1">  Gender   :  </td>
+                    <td colspan="3"><input type="radio" name="g" checked >Male   <input name="g" type="radio"> female </td>
+                </tr>
+                <tr>
+                    <td colspan="1">      Telephone:  </td>
+                    <td colspan="3"><input type="number" pattern="[1-9]{1}.[0-9]{9}" ></td>
+                </tr>
+
+                <tr>
+                    <td colspan="1"> Range    :  </td>
+                    <td colspan="3"><input type="range" min="0" max="20" value="10" id="a" step="2" ></td>
+                </tr>
+                <tr>
+                    <td colspan="1">
+                        Color : 
+                    </td colspan="3">
+                    <td><input type="color" id="color" value="#ff0000" name="c"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="1"> Address :</Address></td>
+                    <td colspan="3"><textarea style="resize: none;"  rows="4" wrap="hard" cols="50" ></textarea></td>
+                </tr>
+
+                
+                <tr>
+                    <td colspan="1">Hobbies :</td>
+                    <td colspan="3"><input list="hobbies">
+                    <datalist id="hobbies">
+                        <option >Running</option>
+                        <option >Swimming</option>
+                        <option >Reading</option>
+                        <option >Music</option>
+                    </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4"><input type="checkbox" required >I accept the term and condition of this organization.</td>
+                </tr>
+
+                <tr>
+                    <td colspan="4"> <input type="submit"></td>
+                    
+                </tr>
+
+                
+              </table>
+                 
+                
+            
+            
+      
+              
+
+          </form>
+
+        </fieldset>
+    </body>
+</html>

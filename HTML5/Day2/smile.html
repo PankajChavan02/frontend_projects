@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Smile</title>
+    </head>
+ <canvas style=" border: 2px solid red;" id="myCanvas"></canvas>
+        
+        <script>
+        //line code
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(300,150);
+        ctx.stroke();
+
+        //triangle
+        ctx.beginPath();
+        ctx.moveTo(230,0);
+        ctx.lineTo(250,70);
+        ctx.lineTo(150,50);
+        ctx.fill();
+
+        //empty triangle
+        ctx.beginPath();
+        ctx.moveTo(150,100);
+        ctx.lineTo(175,130);
+        ctx.lineTo(50,130);
+        ctx.closePath();
+        ctx.stroke();
+
+        //rectangle
+        ctx.beginPath();
+        ctx.fillRect(10,50,70,70);
+
+         //rectangle Hollow
+         ctx.beginPath();
+        ctx.clearRect(25,70,40,30);
+        ctx.stroke();
+
+
+
+
+        </script>
+        
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Drag and Drop</title>
+        <script>
+            function drag(ev){
+             ev.dataTransfer.setData("text",ev.target.id);
+            }
+
+            function allowDrop(ev){
+                ev.preventDefault();
+            }
+            function drop(ev){
+                ev.preventDefault();
+               var data= ev.dataTransfer.getData("text");
+               
+               ev.target.appendChild(document.getElementById(data));
+            }
+        </script>
+    </head>
+    <body>
+        <div style="border : 1px solid black; width: 150px; height: 300px;" id="div1"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <br>
+       
+        <img src="image1.jfif" width="100px" height="200px" draggable="true" id="b" ondragstart="drag(event)">
+        
+    </body>
+</html>

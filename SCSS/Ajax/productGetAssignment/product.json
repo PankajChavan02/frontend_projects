@@ -1,0 +1,5 @@
+[{"name":"tv","price":10000,"discription":"32 inches TV"},
+    {"name":"fan","price":1200,"discription":"Crompton make fan"},
+    {"name":"fridge","price":15000,"discription":"LG fridge"},
+    {"name":"AC","price":30000,"discription":"Voltas make a/c"}
+]

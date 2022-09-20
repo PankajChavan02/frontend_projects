@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nodes</title>
+        
+    </head>
+    <body>
+
+        <div id="father" na>
+            <p>This is previous sibling</p>
+            <div  id="parent"><p>This is first element</p><h2>This is second element</h2><p>This is third element</p><a >This last last element</a></div>
+            <p>This is next sibling</p>
+        </div>
+
+        <script>
+      
+          
+            let x= document.getElementById("parent")
+            
+           
+           x.parentElement.style.color="green"
+           
+            x.firstChild.style.color="blue"
+            x.lastChild.style.color="red"
+            
+        </script>
+       
+        
+    </body>
+</html>

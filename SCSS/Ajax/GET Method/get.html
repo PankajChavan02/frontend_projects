@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Get Method</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script>
+           $(document).ready(function(){                  
+             $.get("https://reqres.in/api/users?page=2",function(result){
+               
+              //console.log(result.data)
+               for(let x of result.data){
+                   alert("full name: "+x.first_name+" "+x.last_name+
+                   "\nEmail: "+x.email)
+               }
+            
+            })
+           })      
+        </script>
+    </head>
+    <body>
+    <div>
+       
+    </div>
+</body>
+</html>

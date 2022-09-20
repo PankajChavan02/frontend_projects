@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Character search</title>
+    </head>
+    <body>
+        <script>
+            var cmpName="Cybage Software Pvt Ltd";
+            document.write("<br/>")
+            let ch = prompt("Enter char to be search in above name :")
+            let i = -1;
+             i = cmpName.indexOf(ch)
+            console.log("I : "+i)
+            if(i != -1) document.write("Character "+ch+" found at "+i) 
+            else document.write("Character "+ch+" not found")
+            document.write("<br/>")
+            document.write(cmpName.substring(0,16))
+            document.write("<br/>")            
+            document.write(cmpName.toLocaleLowerCase())
+            document.write("<br/>")
+            document.write(cmpName.toUpperCase())
+
+            
+        </script>
+        
+    </body>
+</html>

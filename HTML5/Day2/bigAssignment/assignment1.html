@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 1</title>
+        <style>
+            h1{
+            text-align: center;
+        }
+     
+        input:hover{
+            background-color: lightgray;
+        }
+        input[type="submit"]{
+            margin-left: 40%;
+        }
+        input[type="reset"]{
+            margin-left: 40%;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Registration Form</h1>
+        <div style="width: 50%;">
+            <form  style="margin-left: 40%; width: 100%;">
+            
+                <table border="1" style="width: 100%;">
+                    <tr>
+                        <th>User Name</th>
+                        <th><input type="text" maxlength="10" required></th>
+                    </tr>
+                    <tr>
+                        <th>Full Name</th>
+                        <th><input type="text" maxlength="20" required></th>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <th><input type="email" ></th>
+                    </tr>
+                    <tr>
+                        <th>Payment</th>
+                        <th><input type="radio" name="payment" checked >UPI (20% discoount)
+                            <input type="radio" name="payment"  >Cash On Delivery<br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <th><input type="email" ></th>
+                    </tr>
+                    <tr>
+                        <th>Phone No</th>
+                        <th><input style=" width: 20px; font-weight: bold; background-color: grey;" value="+91" readonly ><input type="tel" style=" margin-left: 1%;" pattern="[1-9]{1}.[0-9]{9}"></th>
+                    </tr>
+                    <tr>
+                        <th>Passsword</th>
+                        <th><input type="password" maxlength="8" required></th>
+                    </tr>
+                    <tr>
+                        <th>Confirm Passsword</th>
+                        <th><input type="password" maxlength="8" ></th>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" style="background-color: lightgreen;" value="Submit"></td>
+                        <td><input type="reset" style="background-color: lightsalmon;" value="Cancel"></td>
+                    </tr>
+                </table>
+            </form>
+
+        </div>
+      
+        
+    </body>
+</html>

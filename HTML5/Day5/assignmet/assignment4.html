@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Claculator</title>
+        <style>
+            .cal{
+                margin-left: 35%;
+                margin-right: 35%;
+                border: 1px solid blue;
+                height: 400px;
+                position: relative;
+                top: 20px;
+                background-color: lightgray;
+            }
+            .display{
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                right: 5px;
+                height: 60px;
+                background-color: lightyellow;
+            }
+            .btn{
+                transform: translate(0,100px);               
+                font-size: 25px;
+                padding: 5%;
+                text-align: center;
+                height: 30px;
+                width: 30px;
+                background-color: lightsalmon;
+                margin: 1%;
+            }
+
+            .btn:hover{
+                background-color: salmon;
+            }
+            
+            
+
+         
+            .cl1{
+                margin-left: 1%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cal">
+            <div class="display"><textarea id="display" style=" font-size: 25px; position: absolute; top: 0; width: 99%; left: 0; bottom: 0; resize: none;"> 
+
+            </textarea></div>
+
+            <div class="btn " id="10" style="margin-left: 5%; float: left;">+</div>
+            <div class="btn " id="11" style="float: left;">-</div>
+            <div class="btn " id="c" style="float: left;">C</div>
+            <div class="btn " id="13" style="float: left;">=</div>
+
+            <div class="btn " id="1" style="margin-left: 5%; float: left;">1</div>
+            <div class="btn " id="2" style="float: left;">2</div>
+            <div class="btn " id="3" style="float: left;">3</div>
+            <div class="btn " id="14" style="float: left;">/</div>
+
+            <div class="btn  " id="4" style="margin-left: 5%; float: left;"> 4</div>
+            <div class="btn  " id="5" style="float: left;">5</div>
+            <div class="btn  " id="6" style="float: left;">6</div>
+            <div class="btn  " id="15" style="float: left;">*</div>
+
+            <div class="btn " id="7" style="margin-left: 5%; float: left;">7</div>
+            <div class="btn " id="8" style="float: left; ">8</div>
+            <div class="btn " id="9" style="float: left;">9</div>
+            <div class="btn " id="0" style="float: left;">0</div>
+
+            <script>
+                var operators = "+-/*"
+                var numbers = "0123456789"
+                var string = ""
+                var display = document.getElementById("display")
+            
+
+
+                document.getElementById("13").addEventListener("click",function(){
+                  string = string.replace("+"," +")
+                  string = string.replace("-"," -")
+                  string = string.replace("/"," /")
+                  string = string.replace("*"," *")
+                  string = string.split(" ")
+                 
+                  var total = 0
+                  console.log(string)
+                  for(var i of string){
+
+                      var sign = i.charAt(0)
+                      var num = i.substring(1)
+                     
+                      if("0123456789".includes(sign)){
+                          total = total + parseInt(i)
+                      }
+
+                    if(sign.localeCompare("+")) {
+                        console.log("plus")
+                        total = total + parseInt(num)  
+                        console.log(total)                      
+                    }
+                    else if(sign.localeCompare("-")) {
+                        total = total - parseInt(num)                        
+                    }
+                    else if(sign.localeCompare("*")) {
+                        total = total * parseInt(num)                        
+                    }
+                   else if(sign.localeCompare("/")) {
+                        total = total / parseInt(num)                        
+                    }
+                   
+                    
+                  }
+                  display.value = total
+                     
+                            
+                   
+                 })
+
+
+
+                document.getElementById("c").addEventListener("click",function(){ string = ""; display.value=string })
+                document.getElementById("10").addEventListener("click",function(){
+                    if(string.length){ 
+                    if(operators.includes(string.charAt(string.length-1))) string = string.substring(0,string.length-1)
+                    string = string + "+";}
+                     display.value=string })
+                document.getElementById("11").addEventListener("click",function(){ 
+                    if(string.length){ 
+                    if(operators.includes(string.charAt(string.length-1))) string = string.substring(0,string.length-1)
+                    string = string + "-"; }display.value=string })
+                document.getElementById("14").addEventListener("click",function(){
+                    if(string.length){ 
+                    if(operators.includes(string.charAt(string.length-1))) string = string.substring(0,string.length-1)
+                    string = string + "/"; }display.value=string })
+                document.getElementById("15").addEventListener("click",function(){ 
+                    if(string.length){ 
+                    if(operators.includes(string.charAt(string.length-1))) string = string.substring(0,string.length-1)
+                    string = string + "*"; }display.value=string })
+                
+                
+
+
+
+
+                document.getElementById("1").addEventListener("click",function(){ string = string + 1; display.value=string })
+                document.getElementById("2").addEventListener("click",function(){ string = string + 2; display.value=string })
+                document.getElementById("3").addEventListener("click",function(){ string = string + 3; display.value=string })
+                document.getElementById("4").addEventListener("click",function(){ string = string + 4; display.value=string })
+                document.getElementById("5").addEventListener("click",function(){ string = string + 5; display.value=string })
+                document.getElementById("6").addEventListener("click",function(){ string = string + 6; display.value=string })
+                document.getElementById("7").addEventListener("click",function(){ string = string + 7; display.value=string })
+                document.getElementById("8").addEventListener("click",function(){ string = string + 8; display.value=string })
+                document.getElementById("9").addEventListener("click",function(){ string = string + 9; display.value=string })
+                document.getElementById("0").addEventListener("click",function(){ string = string + 0; display.value=string })
+                
+            
+            </script>
+
+
+
+        </div>
+        
+    </body>
+</html>

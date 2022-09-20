@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div id="div"></div>
+        <script>
+            var student ={
+                fullname: function(){
+                    return "Full name of student is : "+this.firstname+" "+this.lastname
+                },
+
+                college:function() {
+                    return "college name is : "+this.collegename
+                }
+
+            }
+
+            var col={
+                collegename:"GEC"
+            }
+            var person ={
+                firstname: "Pankaj",
+                lastname: "Chavan"
+            }
+
+          
+            document.getElementById("div").innerHTML= student.fullname.call(person)+ student.college.call(col)
+
+            
+        </script>
+        
+    </body>
+</html>

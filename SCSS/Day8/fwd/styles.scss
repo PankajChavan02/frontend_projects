@@ -1,0 +1,6 @@
+@use "main";
+li{
+    @include main.list-style
+}
+
+  

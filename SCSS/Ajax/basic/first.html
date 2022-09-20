@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ajax first program</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script>
+           $(document).ready(function(){
+               $("button").click(function(){
+                   $("div").load("demo.txt",function(responseTxt,statusTxt,xhr){
+                       if(statusTxt=="success")
+                         alert(responseTxt)
+                        if(statusTxt=="error")
+                          alert("Error : "+xhr.status+"         response text:"+xhr.statusText)
+                          else alert("something went wrong")
+                   })
+               })
+           })
+        </script>
+    </head>
+    <div>
+        <h1>Welcome to the cybage page</h1>
+        <button>Enter to see demo file content</button>
+    </div>
+</html>

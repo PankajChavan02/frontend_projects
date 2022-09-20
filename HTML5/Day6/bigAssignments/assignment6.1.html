@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 6.1</title>
+        <style>
+            .container{
+                margin-left: 20%;
+                margin-right: 20%;
+                margin-top: 5%;
+                
+            }
+           
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <table border="1" style="width: 100%;">
+        <tr>
+            <td>HREF</td>
+            <td id="href"></td>
+        </tr>
+        <tr>
+            <td>PATH NAME</td>
+            <td id="path"></td>
+        </tr>
+        <tr>
+            <td>PROTOCOL</td>
+            <td id="protocol"></td>
+        </tr>
+    </table>
+    <input type="button" onclick="shift()" value="Register here">
+</div>
+<script>
+    document.getElementById("href").innerHTML = "<p>"+window.location.href+"<p>"
+        document.getElementById("path").innerHTML = "<p>"+window.location.pathname+"<p>"
+            document.getElementById("protocol").innerHTML = "<p>"+window.location.protocol+"<p>"
+
+            function shift(){
+                window.open("http://127.0.0.1:5500/HTML5/Day6/bigAssignments/registrationPage.html")
+            }
+</script>
+        
+    </body>
+</html>

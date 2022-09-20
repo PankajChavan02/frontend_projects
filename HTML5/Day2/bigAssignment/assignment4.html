@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 4</title>
+        <style>
+            input{
+                margin: 2%;
+            }
+        </style>
+        <script>
+              var worker;
+      function start(){
+        if(window.Worker){
+            worker = new Worker("worker.js");
+            worker.onmessage=update;
+            function update(ev){
+                document.getElementById("p").innerHTML=ev.data;
+            }
+        }
+        else{
+            alert('Your browser does not support web worker')
+        }
+    }
+    function stop(){               
+                worker.terminate(); 
+            }
+        </script>
+    </head>
+    <body>
+        
+        <div style= " margin-left: 6%; padding: 1px; height: 20px; width: 20px; border: 1px solid black;" id="p" ></div>
+        <input type="submit" value="start" onclick="start()"><input type="submit" value="stop" onclick="stop()">
+        
+    </body>
+</html>

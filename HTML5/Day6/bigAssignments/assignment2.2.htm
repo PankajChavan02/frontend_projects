@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Coumpound Interest</title>
+    </head>
+    <body>
+        <fieldset style="text-align:center ; margin-left: 30%; margin-right: 30%;;">
+            <h2>Compound Interest Calculator</h2>
+        Principle        : <input id="p" type="number"><br/><br/>
+        Rate of interest : <input id="r" type="number"><br/><br/>
+        Period of time   : <input id="n" type="number"><br/><br/>
+        <input value="Calculate" onclick="cal()"><br/><br/>
+        <div id="div"></div>    
+    </fieldset>
+
+    <script>
+        function cal(){
+            let p = document.getElementById("p").value
+            let r = document.getElementById("r").value
+            let n = document.getElementById("n").value
+            let total = 1
+            let struct = 1 + (parseFloat(r)/100)
+            for(let i=0;i<n;i++){
+                total = total*struct
+            }
+            total = p*total
+            total = total - p
+            document.getElementById("div").innerHTML = "Total Compound interest is : "+total
+            
+        }
+    </script>
+        
+    </body>
+</html>

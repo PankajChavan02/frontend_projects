@@ -1,0 +1,18 @@
+$size : 16px;
+$map-color : ("color1": blue,"color2":brown,"color3":red,"color5":red);
+
+h1{
+    font-size: $size*2;
+    color: map-get($map-color, "color1" ) ;
+}
+
+p{
+    font-size: $size/4*5;
+    color: map-get($map-color, "color2" );
+}
+
+div{
+    color: map-get($map-color, "color3" );
+    font-size: ($size*3)/16*10;
+  
+}

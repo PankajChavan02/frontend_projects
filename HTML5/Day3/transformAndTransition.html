@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trnsform</title>
+        <style>
+            .cl1{
+                position: relative;
+                top: 100px;
+                left: 150px;
+                border: 1px solid black;
+                 height: 200px; width: 300px;
+               
+                
+                transform: translate(5px,20px);
+                transition: width 5s;
+                transform: scale(1.5,1.5);
+            }
+            .cl2{
+                position: relative;
+                border: 1px solid black;
+                 height: 200px; width: 300px;
+                transform: translate(5px,300px);
+                transition: width 10s;
+            }
+            .cl3{
+                border: 1px solid black;
+                 height: 200px; width: 300px;
+               
+                position: absolute;
+                background-color: chocolate;
+                bottom: 100px;
+                right: 100px;
+                transition: width 10s;
+                transform: rotate(30deg);
+            }
+
+           div:hover{
+                width: 500px;
+                background-color: blue;
+            }
+
+        </style>
+        
+    </head>
+    <body>
+        <div class="cl1"   >cl1</div>
+        <div class="cl2" >cl2</div>
+        <div class="cl3" >cl3</div>
+        
+    </body>
+</html>

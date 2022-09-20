@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Row alert assignment</title>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+       <script>
+           $(document).ready(function(){
+               $("input[type='button'").on("click",function(){
+                  let info ="" +$("input[type='text']").val()
+                  console.log(info)
+                  $("table").append("<tr><td>"+info+"</td></tr>")
+                  $("input[type='text']").val()
+               })
+
+               $("table").on("click","tr",function(){
+                   alert($(this).text())
+               })
+           })
+       </script>
+    </head>
+    <body>
+        <input name="name" type="text" placeholder="enter your name"><input name="add" type="button" value="add" ><br/><br/>
+        <table>
+            <tr>
+                <td name="fname"></td>
+            </tr>
+        </table>
+
+    </body>
+</html>

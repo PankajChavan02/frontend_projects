@@ -1,0 +1,35 @@
+
+@mixin fun($color) {
+   @if $color=="danger"{
+     
+          color:red;
+          border: 1px solid #ff0000;
+          
+      
+    }
+    @else if $color=="sucess"{
+      
+            color: green;
+            border: 1px solid green;
+       
+    }
+    @else if $color=="warning"{
+        
+            color: black;
+            border: 1px solid yellow;
+
+        
+    }
+    @else{
+       
+            color: blue;
+            border: 1px solid blue;
+
+                
+    } 
+    
+}
+
+p{
+    @include fun("warning")
+}

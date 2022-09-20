@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 6</title>
+    </head>
+    <body>
+        <img src="books.jfif" id="i1" style="height: 220px; width: 277px;">
+        <img src="image1.jfif" id="i2" style="height: 220px; width: 277px;">
+        <img src="library.jfif" id="i3" style="height: 220px; width: 277px;">
+        <p>Canvas:</p>
+        
+        <canvas id="b" style="background-color: lightyellow; position: relative;top:0; height: 170px; width: 140px; border: 1px solid red;"></canvas>
+        <canvas id="myCanvas" width="750" height="170"
+        style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        <script>
+            
+           var canvas = document.getElementById("b")
+           var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(300,300);
+ctx.arc(150,150,150,0,Math.PI,true);
+ctx.fillStyle="red";
+ctx.fill();
+ctx.beginPath();
+ctx.moveTo(280,150);
+ctx.arc(150,150,130,0,Math.PI,true);
+ctx.fillStyle="orange";
+ctx.fill();
+ctx.beginPath()
+ctx.moveTo(250,150)
+ctx.arc(150,150,100,0,Math.PI,true);
+ctx.fillStyle="yellow";
+ctx.fill();
+
+ctx.beginPath()
+ctx.moveTo(230,150)
+ctx.arc(150,150,80,0,Math.PI,true);
+ctx.fillStyle="green";
+ctx.fill();
+
+ctx.beginPath()
+ctx.moveTo(210,150)
+ctx.arc(150,150,60,0,Math.PI,true);
+ctx.fillStyle="blue";
+ctx.fill();
+
+ctx.beginPath()
+ctx.moveTo(180,150)
+ctx.arc(150,150,30,0,Math.PI,true);
+ctx.fillStyle="whilte";
+ctx.fill();
+
+ctx.beginPath()
+ctx.moveTo(175,150)
+ctx.arc(150,150,25,0,Math.PI,true);
+ctx.fillStyle="purple";
+ctx.fill();
+
+ctx.stroke()
+            
+        </script>
+
+        
+        
+        <script>
+        window.onload = function() {
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            var img1 = document.getElementById("i1");
+            var img2 = document.getElementById("i2");
+            var img3 = document.getElementById("i3");
+           ctx.drawImage(img1, 10, 10);
+           ctx.drawImage(img2, 160, 10);
+           ctx.drawImage(img3, 400, 10);
+        };
+        </script>
+    </body>
+</html> 

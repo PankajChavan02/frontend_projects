@@ -1,0 +1,20 @@
+@function power($base:10,$exponent:2){
+    $i :0;
+    $total:1;
+    @while $i<$exponent {
+        $total : $total*$base;
+        $i : $i+1;
+    }
+    @return $total
+};
+
+
+div{
+   
+    height: power(10,3)/10*1px;
+    width: power(10,3)/10*2px;
+    border: 1px solid black;
+    padding: power(10,1)/100*100%;
+    margin: power(10,1)/100*100%;
+    background-color: yellow;
+}

@@ -1,0 +1,43 @@
+@use "../base/variables" as d;
+
+button{
+    border-radius: 3px;
+ padding: 12px 15px 12px 15px;
+  background-color: #8bc34a;
+ border: 0;
+ min-width: 110px;
+ font-family: "SegoeUI SemiBold";
+ font-size: 16px;
+ color: d.$color1;    
+}
+
+.primary{
+    background: #8bc34a;
+    color: d.$color1;  
+    border: 1px solid #8bc34a;
+}
+
+.primary:hover{
+    background-color: #9dce5d;
+ color: d.$color1;
+ border: 1px solid #9dce5d;    
+}
+
+.primary:disabled{
+    background-color: #eeeeee;
+ color: #999999;
+ border: 1px solid #eeeeee;
+}
+
+.secondary{
+
+    background-color: d.$color1;
+    color: d.$color2;
+    border: 1px solid d.$color2;
+}
+
+.secondary:disabled{
+    background-color: d.$color1;
+    color: #999999;
+    border:d.$border2;    
+}

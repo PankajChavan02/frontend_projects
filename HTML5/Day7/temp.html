@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div style="border: 1px solid black; height: 100px;width: 300px;display: flex; flex-wrap: nowrap; ">
+           
+ Hello World
+        </div>
+
+        <script>
+      var printer = (function () {
+ var printerInstance;
+ function create () {
+ function print() {
+ // underlying printer mechanics
+ }
+ function turnOn() {
+ // warm up
+ // check for paper
+ }
+ return {
+ // public + private states and behaviors
+ print: print,
+ turnOn: turnOn
+ };
+ }
+ return {
+ getInstance: function() {
+ if(!printerInstance) {
+ printerInstance = create();
+ }
+ return printerInstance;
+ }
+ };
+ function Singleton () {
+ if(!printerInstance) {
+ printerInstance = intialize();
+ }
+ };
+})();
+ 
+        </script>
+        
+    </body>
+</html>

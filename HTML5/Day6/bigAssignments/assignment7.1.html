@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Validation</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <style>
+input:invalid{
+    border: 1px solid red;
+    background-color: lightpink;
+}
+
+            fieldset{
+                margin-left: 20%;
+                margin-right: 20%;
+            }
+            tr{
+                margin: 3%;
+            }
+            td{
+                text-align: center;
+                padding: 2%;
+                font-size: 30px;
+            }
+
+            .btn{
+                padding: 2%;
+                width: 40%;
+            }
+           
+        </style>
+        <script>let worker;
+            
+            $(document).ready(function(){
+                
+
+
+              worker = new Worker("assignmentWorker.js");
+              
+              worker.onmessage=function(val){                  
+                  $("#timer").text(" Welcome! you are on this page since "+val.data+" minutes.")
+              }              
+
+
+                $("#writer").hide()
+
+                $("#reading").change(function(){
+                    console.log("clicked")
+            let checkbox = $("input[type='checkbox']")
+            if(checkbox[0].checked) $("#writer").show()
+            else $("#writer").hide()                           
+        })       
+            
+            })
+          
+        </script>
+    </head>
+    <body onload="loadDate()">
+        <div id="timer" style="text-align: center;padding: 1%;font-size: 25px;text-align: center; "></div>
+        
+        <fieldset>
+            <form action="sucess.html" style=" width: 100%;">
+                <table  style="padding: 2%; width: 100%;">
+                    <thead>
+                        <th colspan="2" style="width: 100%; font-size: 30px;">Registration Form</th>
+                    </thead>
+                    <tr>
+                        <td style=" width: 50%;"> First Name </td>
+                        <td style="width: 50%;"><input type="text" required ></td>
+                    </tr>
+                    <tr>
+                        <td style=" width: 50%;"> Last Name   </td>
+                        <td style="width: 50%;"><input type="text" required ></td>
+                    </tr>
+                    <tr>
+                        <td style=" width: 50%;">  Date of Birth  </td>
+                        <td style="width: 50%;"><input id="date" type="date"  required max="2021-7" min="2021-01" ></td>
+                    </tr>
+                   
+                    <tr>
+                        <td style=" width: 50%;"> Email Address       </td>
+                        <td style="width: 50%;">  <input  type="email"  required ></td>
+                       
+                    </tr>
+                    <tr>
+                        <td style=" width: 50%;"> Hobbies             </td>
+                        <td style="width: 50%;"><input id="reading"  type="checkbox">Reading
+                            <input  type="checkbox">Watching Movie
+                            <input  type="checkbox">Photography</td>
+                    </tr>
+                    <tr id="writer">
+                        <td style=" width: 50%;"> Favourite Writer </td>
+                        <td style="width: 50%;"> <input id="wr" type="text" ></td>
+                    </tr>
+                    <tr>
+                        <td style=" width: 50%;"> <input class="btn" type="submit" value="Submit"> </td>
+                        <td style=" width: 50%;"> <input class="btn" type="reset" value="Reset"> </td>
+                        
+                    </tr>
+                    
+
+                </table>
+                
+                
+            </form>
+
+        </fieldset>
+        <script>
+            function loadDate(){
+                let date = new Date();
+                let day = date.getDate();                
+                let month = date.getMonth();
+                let year = date.getFullYear();
+                let today = year+"-"+month+"-"+day
+                console.log(today)
+                document.getElementById("date").setAttribute("max",today);
+
+            }
+            document.getElementById("reading").addEventListener("checked",function(){
+                document.getElementById("writer").style.visibility = visible;
+            })
+        </script>
+    </body>
+</html>

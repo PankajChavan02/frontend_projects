@@ -1,0 +1,9 @@
+@import "_demo01.scss";
+
+div{
+   
+    height: $h;
+    width: $w;
+    background-color: $bgcolor;
+    border: 20px solid red;
+}

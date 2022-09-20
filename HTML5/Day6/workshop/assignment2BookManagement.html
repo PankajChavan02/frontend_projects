@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 2 (Book Management System)</title>
+        <style>
+         
+            .div1{
+                height: 80px;
+                background-color: lightgreen;
+                padding: 1%;
+            }
+            .nav{
+                margin-top: 1%;
+                margin-right: 1%;
+                margin-bottom: 1%;
+                padding: 1%;
+                padding-top: 2%;
+                height: 50px;
+                width: 180px;
+                background-color: lightpink;
+                color: darkgreen;
+                text-align: center;
+            }
+            .nav:hover{
+                transform: scale(1.2,1.2);
+                border: 4px solid black ;
+            }
+            .main2{
+                color: white;
+            }
+            .main3{
+               padding-left: 1%;
+               padding-right:1% ;
+                text-align: center;
+                color: white;
+            }
+            section{
+                margin-left: 20%;
+                width: 80%;
+                color: black;
+                padding-bottom: 10px;
+                background-color: lightgrey;
+            }
+        </style>
+        <script>
+            var books=[]
+            class Book{
+                constructor(book,author,publisher){
+                    this.book = book
+                    this.author = author
+                    this.publisher = publisher
+                }
+            }
+            function addBook(){
+                var x = document.getElementById("book")
+                var y = document.getElementById("author")
+                var z = document.getElementById("publisher")
+                var book = x.value
+                var author = y.value
+                var publisher = z.value
+                var bk = new Book(book,author,publisher)
+                books.push(bk)
+                alert("book added successfully!!!")
+                console.log(books)
+                x.value=""
+                y.value=""
+                z.value=""
+
+            }
+            function removeBook(){
+                var x1 = document.getElementById("del_book")
+                for(var ele of books){
+                    if(ele.book==x1.value){
+                        var i =books.indexOf(ele)
+                        books.splice(i,1)
+                        alert("Book removed successfully !!! ")
+                    }
+                }
+                x1.value=""
+
+            }
+
+            function getBook(){
+                var name = document.getElementById("edit_book1").value 
+                for(var ele of books ){
+                    if(ele.book == name){
+                        document.getElementById("edit_book").value = ele.book
+                document.getElementById("edit_author").value = ele.author
+                document.getElementById("edit_publisher").value = ele.publisher
+                    }
+                }               
+                
+            }
+
+            function editBook(){
+                let x =document.getElementById("edit_book")
+                let y =document.getElementById("edit_author")
+                let z =document.getElementById("edit_publisher")
+                let book = x.value 
+                let auth = y.value
+                let pub = z.value
+                for(let ele of books){
+                    if(ele.book==book){
+                        ele.author= auth
+                        ele.publisher=pub
+                    }
+                }   
+                x.value=""
+                y.value="" 
+                z.value=""              
+            }
+
+            function listBook(){
+                document.getElementById("list").innerHTML= books.map(x=> "<p> Book Name :"+x.book +" author: "+x.author+" publisher : "+x.publisher+" </p>")
+            }
+            
+        </script>
+    </head>
+    <body style="background-image: url(library.jfif); background-repeat: no-repeat; background-size: cover;">
+        <div class="main div1" style="text-align: center;" >
+            <h1>Book Management System</h1>
+        </div>
+        <div style="float: left; width: 15%; ">
+            <div class="nav"><a href="#a">Add Book</a></div>
+            <div class="nav"><a href="#b">Remove Book</a></div>
+            <div class="nav"><a href="#c">Edit Book</a></div>
+            <div class="nav"><a href="#d">List All Book </a></div>
+        </div>
+
+        <div class="main2" style=" text-align: center; float: left; width: 55%; ">
+            <h1>Book Management System</h1>
+            <section id="a">
+                <h2>Add Book</h2>
+                      Book Name     : <input id="book" type="text"><br/><br/>
+                      Author Name   :<input id="author" type="text"><br/><br/>
+                      Publisher Name:<input id="publisher" type="text"><br/><br/>
+                      <input type="button" value="Add Book" onclick="addBook()">
+                </section>
+
+                <section id="b">
+                    <h2>Remove Book</h2>
+                    Enter book name : <input id="del_book" ><br/><br/>
+                    <input type="button" value="Delete Book" onclick="removeBook()">
+                    </section>
+                    <section id="c">
+
+                        <h2>Edit Book</h2>
+                        Enter book name : <input id="edit_book1" type="text"><br/><br/>
+                       <input type="button" onclick="getBook()" value="Get Book"> <br/><br/>
+                       Book Name : <input id="edit_book" readonly><br/><br/>
+                       Auth Name : <input id="edit_author"><br/><br/>
+                       Publisher : <input id="edit_publisher"><br/><br/>
+                        <input type="button" value="Edit Book" onclick="editBook()">
+                        </section>
+                        <section id="d">
+
+
+                            <h2>List All Book</h2>
+                         <div id="list">
+                         </div>
+                         <input type="button" onclick="listBook()" value="List All Books">
+                            </section>
+            </div>
+             
+            
+               <div class="main3" style="color: darkgreen; float: right; height: 400px; width: 20%;background-color: lightpink; margin-top: 1%;">
+               <h3>What?</h3>
+               <p>This is a test website by Cybagegian for online book management. With this website one can add, edit, remove and see book list</p>
+               <h3>Where?</h3>
+               <p>This is content for testing.THis is content for testing.This is content for testing.This is content for testing.THis is content for testing.</p>
+               
+               </div>
+
+              
+               
+              
+
+      
+        
+    </body>
+</html>

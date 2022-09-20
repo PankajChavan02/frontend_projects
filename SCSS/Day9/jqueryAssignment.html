@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jquery Assignment Color circles</title>        
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>      
+        <style>
+            .container{
+                height: 250px;
+                width: 100%;
+                background-color: lightgrey;
+                position: relative;
+            }
+            .circle{
+                border-radius: 50%;
+                height: 90px;
+                width: 90px;
+                border: 1px solid black;
+                z-index: 10;
+            float: left;
+            margin-left: 5%;
+            }
+            input{
+                border-radius: 30px;
+            }
+            #red{
+                background-color: red;
+            }
+            #orange{
+                background-color: orange;
+            }
+            #yellow{
+                background-color: yellow;
+            }
+        </style> 
+        <script>
+          let arr = ['<div id="red" class="circle"></div>',
+            '<div id="orange" class="circle"></div>',
+            '<div id="yellow" class="circle"></div>',
+            '<div id="red" class="circle"></div>',
+            '<div id="orange" class="circle"></div>',
+            '<div id="yellow" class="circle"></div>',        
+        ]
+        $(document).ready(function(){
+            $("#1").click(function(){
+                
+                $(".circle").remove()
+                let y = arr.filter(x=>x.includes("red"))
+                
+                $(".container").append(y)
+            })
+            $("#2").click(function(){
+                $(".circle").remove()
+                let y = arr.filter(x=>x.includes("orange"))
+                $(".container").append(y)
+            })
+            $("#3").click(function(){
+                $(".circle").remove()
+                let y = arr.filter(x=>x.includes("yellow"))
+                $(".container").append(y)
+            })
+            $("#4").click(function(){
+                $(".circle").remove()
+                let y = arr.join("")
+                $(".container").append(y)
+            })
+        })
+        </script> 
+    </head>
+    <body>
+        <div class="container">
+            <div >
+                <input type="button" value="show red" id="1">
+                <input type="button" value="show orange" id="2">
+                <input type="button" value="show yellow" id="3">
+                <input type="button" value="show all" id="4"><br/><br/><br/>
+            </div>
+           
+        </div>
+    </body>
+</html>

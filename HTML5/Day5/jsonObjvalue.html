@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div id="p1"></div>
+        <div id="p2"></div>
+        <div id="p3"></div>
+        <script>
+            let person={
+                name: "Pkc",
+                age: 25
+            }
+            document.getElementById("p1").innerHTML= JSON.stringify(person)  //{"name":"Pkc","age":25}
+            document.getElementById("p2").innerHTML=Object.values(person) //Pkc,25
+        </script>
+    </body>
+</html>

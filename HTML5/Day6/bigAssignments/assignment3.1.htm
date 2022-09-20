@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Date</title>
+    </head>
+    <body>
+        <script>
+            var date = new Date()
+            let sign;
+           
+            const day=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
+            const month=["Jan","Feb","Mar","Apr","May","Jun","Juy","Aug","Sept","Oct","Nov","Dec"]
+           
+            document.write(day[date.getDay()]+" ")
+            document.write(month[date.getMonth()]+" ")
+            document.write(date.getDate()+" ")
+            document.write(date.getFullYear()+" ")
+            document.write(date.getHours()+":")
+            document.write(date.getMinutes()+":")
+            document.write(date.getSeconds()+" ")
+            if(date.getHours()>12) sign ="PM"
+            else sign = "AM";
+            document.write(sign)
+            document.write("<br/>")
+            let hours = date.getHours()
+            if(hours<12 ) document.write("Good Morning")
+            if(hours>=12 && hours<16) document.write("Good Afternoon")
+            if(hours>16 ) document.write("Good Evening") 
+           
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            x=5
+            var x
+            console.log(x)
+          
+            try{
+                y=10
+            let y
+            console.log(y)
+            }catch(err){
+                console.log(err)
+            }
+
+            try{
+                z=10
+            const z=0
+            console.log(z)
+            }catch(err){
+                console.log(err)
+            }
+            document.getElementById("q").innerHTML= document.getElementById("p").innerText
+            console.log(document.getElementById("p").textContent)
+
+            
+            console.log(document.getElementById("p").innerHTML)
+            
+        </script>
+    </head>
+    <body>
+
+        <div id="p"><h2>Hello World</h2></div>
+        <div id="q"></div>
+    </body>
+</html>

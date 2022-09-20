@@ -1,0 +1,48 @@
+{
+    "users": [
+      {
+        "id": 1,        
+        "password": "admin",
+        "email": "admin@gmail.com",
+        "mobile":"8745612390",
+        "address":"",
+        "download":[
+            { 
+                "imageid":"2",
+                "download_timestamp":""
+            }
+        ]        
+      }],
+
+      "images":[
+          {
+              "id":"1",
+              "category" :"Travels",
+              "url":"",
+              "userid":"",
+              "caption":"",
+              "flag":"",
+              "upload_timestamp":"",
+              "likes-count":"0" 
+           }
+           ],
+
+        "likes":[
+            {
+                "userid":"1",
+                "timestamp":"",
+                "imageid":""                
+            }
+        ],
+
+        "comments":[
+            {
+                "userid":"1",
+                "imageid":"1",
+                "content":"",
+                "timestamp":""
+            }
+        ]
+
+
+}

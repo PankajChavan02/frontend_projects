@@ -1,0 +1,38 @@
+
+    .imageDisp{
+        max-width: 100%;
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+   
+    .comment{
+       /*  
+        background-color: grey;
+         
+        border: 1px solid black;*/
+        border-radius: 5px;
+        
+        margin: 2%;
+    }
+
+    .modal-dialog{
+      width: 900px !important;
+    }
+
+    .comment-header{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1%;
+    }
+
+    .opt:hover{
+        
+      border-radius: 5px;
+      
+    }
+
+    .modal-body{
+        
+        background-color: whitesmoke;
+    }

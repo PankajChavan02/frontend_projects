@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Local Storage</title>
+        <script>
+            saveData=()=>{
+              var name = document.getElementById("username").value;
+              var password = document.getElementById("password").value;
+              sessionStorage.setItem("name",name);
+              sessionStorage.setItem("password",password);
+            }
+            seeData=()=>{                
+                     alert("Your name is : "+sessionStorage.getItem("name")+"\nYour password is : "+sessionStorage.getItem("password"));                
+            }
+            eraseData=()=>{
+                sessionStorage.removeItem("name");
+                sessionStorage.removeItem("password");
+                alert("Data deleted successfully !!!");
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <h5>Enter username : </h5>
+<input type="text" id="username">
+<h5>Entr password : </h5>
+<input type="password" id="password"> <br><br><br>
+<input type="submit" value="save data" onclick="saveData()">
+<input type="submit" value="see data" onclick="seeData()">
+<input type="submit" value="erase data" onclick="eraseData()">
+        </form>
+        
+    </body>
+</html>

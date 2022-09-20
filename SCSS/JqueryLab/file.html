@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Workshop Page </title>
+        <style>
+            .container{
+                margin-left: 15%;
+                margin-right: 15%;                             
+                height: 1430px;
+                border: 1px solid brown;  
+                border-radius: 5px; 
+                background-color: lightgray;                          
+            }
+
+            .packet:hover{
+                transform: scale(1.1,1.1);
+            }
+
+            .packet{
+                height: 250px;
+                width: 170px;
+                border: 1px solid blue;
+                background: lightyellow;
+                float: left;
+                margin-left: 7%;
+                margin-right: 7%;
+                margin-top: 2%;
+                margin-bottom: 2%;
+                position: relative;
+                border-radius: 5px;
+                
+            }
+            body{
+                font-style: italic;
+                background-color: lightyellow;
+            }
+
+            h1{
+                text-align: center;
+                font-size: 70px;
+               
+            }
+            span{
+                color: palevioletred;
+            }
+
+            .buttons{
+                text-align: center;
+                font-weight: 15px;                           
+            }
+
+            button{
+                background-color: lightgoldenrodyellow;
+                padding: 1%;
+                margin-left: 2%;
+                margin-bottom: 2%;                               
+                border-radius: 10px;
+                
+            }
+
+            button:hover{
+                transform: scale(1.1,1.1);
+                            
+            }
+
+            .img1{
+               position: absolute;                
+               border-radius: 3px;
+               height: 200px;
+               width: 166px;
+               margin: 1%;                
+            }
+            label{
+                position: absolute;
+                top: 216px;
+                font-size: 20px;
+                font-weight: bold;
+                margin-left: 20px;
+            }
+            .searchBar{
+                text-align: center;
+                font-size: 20px;                         
+         }
+           .input{
+               border-radius: 10px;
+              font-size: 16px;
+               width: 400px; 
+               height: 20px;
+           }
+           .input:hover{
+               border:2px solid blue;
+           }
+
+        
+
+        </style>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>    
+        <script>
+
+            $(document).ready(function(){
+
+                $("#search").keyup(function(){
+                    let searchWord = $(this).val().toLocaleLowerCase()
+                    console.log(searchWord)
+                    $(".packet").filter(function(){
+                        let word = $(this).children().text().toLocaleLowerCase()                       
+                        $(this).toggle(word.indexOf(searchWord)>-1)
+                    })
+                })
+
+                $("#all").click(function(){
+                    $(".packet").show()
+                })
+
+                $("#cake").click(function(){
+                    $(".packet").filter(function(){
+                        let x= $(this).children().text().toLocaleLowerCase()
+                        if(!x.includes("cake")) $(this).hide() 
+                        else if(x.includes("cupcake")) $(this).hide()
+                        else $(this).show()             
+                    })
+                })
+
+                $("#cupcakes").click(function(){
+                    $(".packet").filter(function(){
+                        let x= $(this).children().text().toLocaleLowerCase()
+                        if(!x.includes("cupcake")) $(this).hide()
+                        else $(this).show()
+                                
+                    })
+                })
+
+                $("#sweets").click(function(){
+                    $(".packet").filter(function(){
+                        let x= $(this).children().text().toLocaleLowerCase()
+                        if(!x.includes("sweet")) $(this).hide() 
+                        else $(this).show()
+                                
+                    })
+                })
+
+                $("#doughnuts").click(function(){
+                    $(".packet").filter(function(){
+                        let x= $(this).children().text().toLocaleLowerCase()
+                        if(!x.includes("doughnut")) $(this).hide() 
+                        else $(this).show()
+                                
+                    })
+                })
+            })
+
+           
+        </script>        
+    </head>
+    <body>
+         <div class="container">
+             <h1>Our <span>Store</span></h1>
+             <div class="buttons">
+                <button id="all">All</button>
+                 <button id="cake">Cake</button>
+                 <button id="cupcakes">Cupcakes</button>
+                 <button id="sweets">Sweets</button>  
+                 <button id="doughnuts">Doughnuts</button>                 
+             </div>
+             <div class="searchBar">  <input class="input" type="search" id="search" ></div>
+             <div class="packet"><img class="img1" src="cake1.jfif" alt="your browser does not support image">
+                <label>Cake1 item $5 </label></div>
+
+                <div class="packet"><img class="img1" src="cake2.jfif" alt="your browser does not support image">
+                    <label>Cake2 item $10</label></div>
+
+                <div class="packet"><img class="img1" src="cake3.jfif" alt="your browser does not support image">
+                    <label>Cake3 item $10</label></div>
+
+                <div class="packet"><img class="img1" src="cupcake1.jfif" alt="your browser does not support image">
+                    <label>Cupcake1 item $5</label></div>
+
+                <div class="packet"><img class="img1" src="cupcake2.jfif" alt="your browser does not support image">
+                    <label>Cupcake2 item $5</label></div>
+
+                <div class="packet"><img class="img1" src="cupcake3.jfif" alt="your browser does not support image">
+                    <label>Cupcake3 item $5</label></div>
+            
+                <div class="packet"><img class="img1" src="sweets1.jfif" alt="your browser does not support image">
+                    <label>Sweet1 item $10</label></div>
+                <div class="packet"><img class="img1" src="sweets2.jfif" alt="your browser does not support image">
+                    <label>Sweet2 item $5</label></div>
+                <div class="packet"><img class="img1" src="sweets3.jfif" alt="your browser does not support image">
+                    <label>Sweet3 item $5</label></div> 
+                <div class="packet"><img class="img1" src="doughnut1.jfif" alt="your browser does not support image">
+                    <label>Doughnut1 $10</label></div>
+                <div class="packet"><img class="img1" src="doughnut2.jfif" alt="your browser does not support image">
+                    <label>Doughnut2 $10</label></div>    
+            
+         </div>
+
+    </body>
+</html>

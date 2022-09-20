@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ajax first program</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script>
+           $(document).ready(function(){
+
+           
+              $.ajax({
+                  type:"GET",
+                  url:"product.json",
+                  success:function(data){
+                   let string = "  <table  style='background-color: cyan;'> <thead><th>Product Name:</th>"+
+                "<th>Product Price:</th>"+
+               "<th>Product Description:</th></thead>"
+                   
+                      for(let x of data){                          
+                            string+="<tr><td>"+x.name+"</td><td>"+x.price+"</td><td>"+x.discription+"</td></tr>"                         
+                      }
+                      string+='</table>'
+                      console.log(string)
+                      $("div").append(string)
+                  }
+              })
+           })
+
+      
+        </script>
+    </head>
+    <div>
+        <h1>Product management</h1>
+       
+        
+
+       
+        
+    </div>
+</html>

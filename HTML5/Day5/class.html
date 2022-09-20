@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>class</title>
+        <script>
+            
+            class student{
+                
+                constructor(name,lastName){
+                    this.name=name
+                    this.lastName=lastName
+                }
+                
+                get n(){
+                    return this.name+" "+this.lastName
+                }
+
+                set n(x){
+                    this.name = x
+                }
+               
+                fullName(){
+                    return `${this.name}  ${this.lastName}`
+                }
+                
+            }
+
+            let st = new student("Vinit","Chavan")
+         
+            console.log(st.fullName())
+            st.n = "Pankaj changed"
+            console.log(st.fullName())
+            let name = st.n
+            console.log("name"+name)
+           
+        </script>
+    </head>
+    <body>
+
+        <div id="d"></div>
+        <div id="e"></div>
+        
+    </body>
+</html>

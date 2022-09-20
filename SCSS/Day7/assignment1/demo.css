@@ -1,0 +1,109 @@
+.theme-1 {
+  height: 320px;
+  width: 800px;
+  margin-top: 5%;
+  border: 1px solid blue;
+  float: none;
+  background-color: yellowgreen;
+}
+
+.theme-2 {
+  height: 320px;
+  width: 800px;
+  margin-top: 5%;
+  border: 1px solid blue;
+  float: none;
+  background-color: lightpink;
+}
+
+.theme-3 {
+  height: 320px;
+  width: 800px;
+  margin-top: 5%;
+  border: 1px solid blue;
+  float: none;
+}
+
+.left {
+  height: 300px;
+  width: 66%;
+  background-color: lightskyblue;
+  float: left;
+  margin: 1%;
+  font-size: 40px;
+  color: lightseagreen;
+  background-color: grey;
+}
+
+.right {
+  height: 300px;
+  width: 30%;
+  background-color: lightskyblue;
+  float: left;
+  margin: 1%;
+  font-size: 40px;
+  color: lightseagreen;
+  background-color: lightgrey;
+  position: relative;
+  background-color: lightgrey;
+}
+
+.left1 {
+  height: 300px;
+  width: 66%;
+  background-color: lightskyblue;
+  float: left;
+  margin: 1%;
+  font-size: 40px;
+  color: lightseagreen;
+  color: yellow;
+  background-color: lightsalmon;
+}
+
+.right1 {
+  height: 300px;
+  width: 30%;
+  background-color: lightskyblue;
+  float: left;
+  margin: 1%;
+  font-size: 40px;
+  color: lightseagreen;
+  position: relative;
+  color: yellow;
+  background-color: salmon;
+}
+
+.left4 {
+  height: 300px;
+  width: 66%;
+  background-color: lightskyblue;
+  float: left;
+  margin: 1%;
+  font-size: 40px;
+  color: lightseagreen;
+  color: blue;
+  background-color: lightblue;
+}
+
+.right4 {
+  height: 300px;
+  width: 30%;
+  background-color: lightskyblue;
+  float: left;
+  margin: 1%;
+  font-size: 40px;
+  color: lightseagreen;
+  position: relative;
+  color: blue;
+  background-color: lightblue;
+}
+
+.button {
+  position: absolute;
+  bottom: 50px;
+  text-align: center;
+  border-radius: 20px;
+  font-weight: bold;
+  background-color: greenyellow;
+}
+/*# sourceMappingURL=demo.css.map */

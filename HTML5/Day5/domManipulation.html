@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <ul id="list">
+            <li>Tea</li>
+            <li>Biscuit</li>
+            <li>coffee</li>
+        </ul>
+        <script>
+            var node=document.createElement("LI")
+            var textNode = document.createTextNode("Soda")
+            node.appendChild(textNode)
+            var list=document.getElementById("list")
+            list.appendChild(node)
+            var list = document.getElementById("list");
+            if (list.hasChildNodes()) {
+            list.removeChild(list.childNodes[0]);
+            list.setAttribute("style","color:'red'")
+            }
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web workers</title>
+    <script>
+        var worker;
+      function start(){
+        if(window.Worker){
+            worker = new Worker("worker.js");
+            worker.onmessage=update;
+            function update(ev){
+                document.getElementById("p").innerHTML=ev.data;
+            }
+        }
+        else{
+            alert('Your browser does not support web worker')
+        }
+    }
+    function stop(){               
+                worker.terminate(); 
+            }
+    
+    </script>
+    </head>
+
+    <body>
+        <div id="p"></div>
+        <button onclick="start()">Start Worker</button>
+        <button onclick="stop()">Stop Worker</button>
+        
+        
+    </body>
+</html>

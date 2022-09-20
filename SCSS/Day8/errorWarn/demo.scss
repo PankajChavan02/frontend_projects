@@ -1,0 +1,6 @@
+$statement: "hello world"; 
+@debug $statement;
+
+@warn $statement;
+
+@error $statement;

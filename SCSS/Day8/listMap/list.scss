@@ -1,0 +1,8 @@
+$maplist : ("width":100px,"height":400px,"border":1px solid blue);
+
+div{   
+    height: map-get($maplist,"width");
+    width: map-get($maplist,"height");
+    border: map-get($maplist,"border");
+    background-color: map-get($maplist,"bgcolor");
+}

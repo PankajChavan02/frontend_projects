@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Put Program</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script>
+           $(document).ready(function(){ 
+               let person={
+                            "name": "morpheus",
+                            "job": "zion resident"
+                        }
+            $.ajax({
+                url:"https:reqres.in/api/users/2",
+                type:"PUT",
+                data: person,
+                success:function(data){
+                    alert("Name : "+data.job+"\nJob : "+data.job+"\nUpdated At : "+data.updatedAt)
+                }
+                
+            })
+           })      
+        </script>
+    </head>
+    <body>
+    <div>
+       
+    </div>
+</body>
+</html>

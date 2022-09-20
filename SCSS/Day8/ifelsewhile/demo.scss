@@ -1,0 +1,13 @@
+$x:21;
+
+ 
+
+@if $x%3!=0{
+    @error  if true;
+}
+@else if $x>21{
+     @error else if true ;
+}
+@else {
+    @error else is running;
+}

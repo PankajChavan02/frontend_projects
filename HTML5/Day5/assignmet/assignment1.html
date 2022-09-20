@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Listener</title>
+       
+    </head>
+    <body>
+        <div id="p" style="height: 200px; width: 400px; border: 1px solid black;"> Hello Guys</div>
+        <input id="b1"  style="background-color: red;" type="submit">
+        <input id="b2" style="background-color: blue;" type="submit">
+        <input id="b3" style="background-color: green;" type="submit">
+        <input id="b4" style="background-color: yellow;" type="submit">
+        <script>
+           
+            var x= document.getElementById("p")
+            document.getElementById("b1").addEventListener("click",function(){x.style.backgroundColor="red"})
+            document.getElementById("b2").addEventListener("click",function(){x.style.backgroundColor="blue"})         
+            document.getElementById("b3").addEventListener("click",function(){x.style.backgroundColor="green"})        
+            document.getElementById("b4").addEventListener("click",function(){x.style.backgroundColor="yellow"})
+            
+        
+    </script>
+            </body>
+</html>

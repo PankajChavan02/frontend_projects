@@ -1,0 +1,9 @@
+@use "_demo1" as d;
+
+
+
+
+div{
+    @include d.fun();
+    border: 1px solid black;
+}

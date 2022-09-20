@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Search page</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script>
+            let x =["Rice","Roti","Chapati","Dal","Panir Sabji","Dosa","Upama"]
+            $(document).ready(function(){
+                $("#search").keyup(function(){
+                    let search = $(this).val()+""
+                    search = search.toLocaleLowerCase()
+                    $("ul li").filter(function(){
+                        $(this).toggle($(this).text().toLocaleLowerCase().indexOf(search)>-1)
+                    })
+
+                   
+                })
+            })
+            
+        </script>
+        <style>
+            .container{
+                background-color: lightgray;
+                border: 5px solid blue;
+                margin-left: 8%;
+                margin-right: 8%;
+                text-align: center;
+                margin-top: 3%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <h1>Welcome to home page</h1>
+        <input id="search" type="text">
+        <h3>List</h3>
+        <div >
+            <ul id="output">
+                <li>Rice</li><li>Roti</li><li>Chapati</li><li>Dal</li><li>Panir Sabji</li><li>Dosa</li><li>Upama</li>
+            </ul>
+        </div>
+    </div>
+
+    </body>
+</html>

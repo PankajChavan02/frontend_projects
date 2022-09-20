@@ -1,0 +1,17 @@
+$body:lightpink;
+$primary-color:blue;
+$footer:lightblue;
+$font-stack: Helvetica, sans-serif;
+
+body{
+    background-color: $body;
+    font: $font-stack
+}
+
+header{
+    color: $primary-color;
+}
+
+a{
+    color: $primary-color;
+}

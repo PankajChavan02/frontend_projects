@@ -1,0 +1,13 @@
+@mixin size {
+    height: 300px;
+    width: 200px;
+    padding: 4%;
+    margin: 1%;
+    border: 3px solid blue;      
+}
+
+$size : 30px;
+
+@mixin color {    
+    $color: green;
+}

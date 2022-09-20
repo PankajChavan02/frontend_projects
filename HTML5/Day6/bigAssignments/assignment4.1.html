@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array List</title>
+    </head>
+    <body>
+        <input type="text" id="name">
+        <input type="button" id="add" onclick="addName()" value="Add">
+        <input type="button" id="display" onclick="listName()" value="Display">
+        <h2>List of Students</h2>
+        <div id="list"></div>
+
+        <script>
+            const arr=[]
+            function addName(){
+                let x=document.getElementById("name")
+                var name = x.value
+                arr.push(name)
+                x.value = ""
+                console.log(arr)
+            }
+
+            function listName(){
+                console.log(arr)
+                document.getElementById("list").innerHTML = arr.map(x=>"<p>"+x+"<p>")
+                            
+            }
+
+
+        </script>
+        
+    </body>
+</html>

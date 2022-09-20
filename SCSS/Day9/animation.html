@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+       
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script>
+
+
+
+            $(document).ready(function(){
+            
+            let x = $("p").length
+            console.log(x)
+
+            $("div").click(function(){
+              console.log("clicked")
+               
+                $("div").animate({                   
+                    height: "200px",
+                    width:"300px",
+                    border:"1px solid red",                  
+                }).animate({
+                    borderWidth:"20px",
+                    borderColor:"red"   ,
+                    fontColor:"blue",
+                    fontSize:"70px" ,   
+                })
+            })
+        })
+        </script>
+        
+    </head>
+    <body>
+        <div class="div1" style=" margin-left: 40%; padding: 5%; margin-top: 10%; height: 50px; width: 80px; border: 1px solid red; background-color: yellow;">
+            Hello world
+       </div>
+       <p>this is p tag</p>
+       <p>this is p tag</p>
+       <p>this is p tag</p>
+       <p>this is p tag</p>
+       <p>this is p tag</p>
+       <p>this is p tag</p>
+        
+    </body>
+</html>

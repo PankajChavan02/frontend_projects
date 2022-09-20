@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin",
+      "email": "admin@gmail.com",
+      "age": 25,
+      "images": "1"
+    },
+    {
+      "id": 2,
+      "username": "admin2",
+      "password": "admin2",
+      "email": "admin2@gmail.com",
+      "age": 25,
+      "images": "2"
+    },
+    {
+      "id": 3,
+      "username": "admin3",
+      "password": "admin3",
+      "email": "admin3@gmail.com",
+      "age": 25,
+      "images": "3"
+    },
+    {
+      "id": "4",
+      "username": "admin4",
+      "name": "varun",
+      "password": "viru",
+      "email": "viru@gmail.com",
+      "age": "23"
+    }
+  ],
+  "images": [
+    {
+      "id": 1,
+      "name": "image1",
+      "url": "",
+      "description": "this is your image"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+@use "_base" as d;
+
+.div1{
+    font-size: d.$size;    
+}
+
+.div2{
+    @include d.size;
+    float: right;
+    background-color: skyblue;
+}

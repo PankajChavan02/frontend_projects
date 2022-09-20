@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Post Program</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script>
+           $(document).ready(function(){ 
+               let person={
+                "name": "morpheus",
+                "job": "leader"
+            }       
+             $.post("https://reqres.in/api/users?page=2",person,function(result){
+               
+              console.log(result)
+              alert("Name : "+result.name+" \nJob : "+result.job)
+              
+            })
+           })      
+        </script>
+    </head>
+    <body>
+    <div>
+       
+    </div>
+</body>
+</html>

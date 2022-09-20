@@ -1,0 +1,74 @@
+@use "variables" as d;
+@forward "variables";
+
+
+
+body{
+    font-style: italic;
+}
+
+.container{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+
+
+.col-6 {
+    @include d.col();
+      
+}
+
+
+.nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 8fr;
+    gap: 2%;
+    background-color: #3b3b3b;
+    color: white;
+    
+}
+
+.menu:hover{
+    background-color: black;
+}
+
+.img1{
+    width: 100%;
+    height: auto;
+}
+
+.img2{
+    width: 100%;
+    height: auto;
+}
+
+.header{
+    text-align: center;
+    background-color: #ddd;
+    height: 11vh;
+    padding: 2%;
+    
+}
+
+.link{     
+   padding: 2%;        
+}
+
+.link:hover{
+    background-color: blue;
+    color: white;
+    
+}
+
+.container{
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.footer{
+    width: 100%;
+    background-color: d.$lightGrey;
+    float: left;
+    text-align: center;
+}

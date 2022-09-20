@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Picture Responsive</title>     
+          
+        <meta name="viewport" content="width:device-width;initial-scale:1.0"> 
+        <style>
+            .container{
+                display: grid;
+                
+                grid-template-columns: repeat(4,1fr);
+            }
+            .section{
+                background-color: lightgreen;
+                padding: 1%;
+                border: 1px solid black;
+            }
+
+            .hol{
+                grid-row:2/ span 3;
+            }
+
+            .cont{
+                display: grid;
+                grid-template-rows: repeat(3,fr1);
+            }
+
+            .f{
+                padding: 2%;
+                background-color: lightpink;
+                float: left;
+                width: 10%;
+            }
+
+            .cont1{
+                display: grid;
+                grid-column: 1/span 4;
+                flex-wrap: wrap;
+            }
+
+            .h{
+               
+                float: left;
+                padding: 2%;
+                background-color: lightsalmon;
+                width: 10%;
+
+            }
+
+
+
+          
+        </style>
+       
+    </head>
+    <body>
+        <div class="cont">
+            <div class="f" >first</div>
+            <div class="f">second</div>
+            <div class="f">third</div>
+            <div class="f" >fourth</div>
+            <div class="h" >Holiday</div>
+        </div> 
+        <div class="cont1">
+           
+           
+        </div>   
+       <div class="container">
+           <div class="section">1</div>
+           <div class="section hol">2</div>
+           <div class="section">3</div>
+           <div class="section">4</div>
+           <div class="section">1</div>
+           <div class="section">2</div>
+           <div class="section">3</div>
+           <div class="section ">4</div>
+           <div class="section">1</div>
+           <div class="section">2</div>
+           <div class="section">3</div>
+           <div class="section">4</div>
+           <div class="section">1</div>
+           <div class="section">2</div>
+           <div class="section">3</div>
+           <div class="section">4</div>
+       </div> 
+    </body>
+</html>

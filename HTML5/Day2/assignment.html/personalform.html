@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Personal Details Form</title>
+        <style>
+            .fie{
+                margin-left: 20%;
+                margin-right: 20%;
+            }
+
+            .validate:invalid{
+                border: 1px solid red;
+            }
+
+            .validate:valid{
+                border: 1px solid blue;
+            }
+
+            input:hover{
+                background-color: palegreen;
+            }
+
+            .submit:hover{
+                background-color: orange;
+                transform: translate(1.2,1.2);
+            }
+
+           
+            
+        </style>
+    </head>
+    <body>
+        <fieldset class="fie" style=" align-content: center; width: 60%; background-color: greenyellow;">    
+                <form>
+            <table width="75%" >
+                <thead>
+                    <th colspan="2" style="text-align: center; font-weight: bold; color: red;">
+                        Personal Death
+                    </th>
+                </thead>
+                <tr >
+                    <td style="text-align: end;"  width="50%">
+                        Name:
+                    </td>
+                    <td>
+                        <input class="validate" type="text" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: end;" maxlength="8" width="50%">
+                        Password:
+                    </td>
+                    <td>
+                        <input class="validate" type="password"   required>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: end;" width="50%">
+                        Email ID:
+                    </td>
+                    <td>
+                        <input class="validate" type="email" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: end;" width="50%">
+                        Gender :
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" checked> Male
+                        <input type="radio" name="gender" > Female
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: end;" width="50%">
+                        Contact :
+                    </td>
+                    <td>
+                        <input class="contact" style="background-color: grey;" value="+91" size="2px" readonly>
+                        <input type="tel" pattern="[1-9]{1}.[0-9]{10}" > 
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center; font-weight: bold; color: red;" >
+                        Educational Qualification
+                    </td>
+                   
+                </tr>
+                <tr>
+                    <td width="50%" style="text-align: end;" >
+                        Degree:
+                    </td>
+                    <td width="50%" >
+                        <input list="degree" >
+                        <datalist id="degree">
+                            <option value="BE"></option>
+                            <option value="Diploma"></option>
+                            <option value="PG Diploma"></option>
+                            <option value="ME"></option>
+                        </datalist>
+                    </td>
+                   
+                </tr>
+
+                <tr>
+                    <td width="50%" style="text-align: end;" >
+                        Engineering :
+                    </td>
+                    <td width="50%" >
+                        <select>  
+                            <option>Select Group</option>                      
+                            <option value="BE">ELECTRICAL</option>
+                            <option value="Diploma">MECHANICAL</option>
+                            <option value="PG Diploma">CHEMISTRY</option>
+                            <option value="ME">INFORMATION TECHNOLOGY</option>
+                        
+                    </select>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%" style="text-align: end;" >
+                        Hobbies :
+                    </td>
+                    <td width="50%" >
+                       <input type="checkbox" >Physical chess
+                       <input type="checkbox" >Reading
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center; font-weight: bold; color: red;" >
+                        Address
+                    </td>
+                   
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <textarea style="resize: none;" rows="8" cols="70"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%" style="text-align: end;">Attach Resume</td>
+                    <td><input type="file"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                    <input class="submit" type="submit" style="background-color: yellow;"></td>
+                </tr>
+
+
+            </table>
+        </form>
+    </fieldset>
+
+    </body>
+</html>

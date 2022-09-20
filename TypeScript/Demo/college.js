@@ -1,0 +1,10 @@
+"use strict";
+exports.__esModule = true;
+var student_1 = require("./student");
+var teacher_1 = require("./teacher");
+new student_1.Student('Manish ', 'Pune', true).disp();
+new student_1.Student('Rohit ', 'Pune').disp();
+new student_1.Student('Rohan ', 'Pune', false).disp();
+new teacher_1.Teacher('Nilesh ', 'Pune', 'Adcance Java', 'Data structure', 'Database').disp();
+new teacher_1.Teacher('Sachin ', 'Pune', 'Java').disp();
+new teacher_1.Teacher('Shailesh', 'Mumbai').disp();

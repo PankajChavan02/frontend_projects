@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List search</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+       <script>
+
+           $("id").on("click").
+           $(document).ready(function(){
+               let string =""
+               string = string + $("id").val();
+              
+               string.toLowerCase
+              let x= $("ul li").text();
+              let arr=x.split(" ")
+              console.log(string+" "+arr)
+              
+        })
+        
+        
+    
+       </script>
+    </head>
+    <body>
+        <div>
+            <input id="id" placeholder="search...">
+            <div>
+                <ul id="myList">
+                    <li>Singing </li>
+                    <li>Dancing </li>
+                    <li>Swimming </li>
+                    <li>Running </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

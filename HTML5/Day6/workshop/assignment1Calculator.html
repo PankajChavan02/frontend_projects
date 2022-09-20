@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Claculator</title>
+        <style>
+            .cal{
+                margin-left: 35%;
+                margin-right: 35%;
+                border: 1px solid blue;
+                height: 500px;
+                position: relative;
+                top: 20px;
+                background-color: lightgray;
+            }
+            .display{
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                right: 5px;
+                height: 60px;
+                background-color: lightyellow;
+            }
+            .btn{
+                transform: translate(0,100px);               
+                font-size: 25px;
+                padding: 5%;
+                text-align: center;
+                height: 18px;
+                width: 30px;
+                background-color: lightsalmon;
+                margin: 1%;
+            }
+
+            .btn:hover{
+                background-color: salmon;
+            }
+
+           
+            
+
+         
+            .cl1{
+                margin-left: 1%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cal">
+            <div class="display"><textarea id="display" style=" font-size: 25px; position: absolute; top: 0; width: 99%; left: 0; bottom: 0; resize: none;"> 
+
+            </textarea></div>
+            <div class="btn " id="B" style="margin-left: 5%; float: left;" >B</div>
+            <div class="btn " id="T" style="float: left;">T</div>
+            <div class="btn " id="" style="float: left;"></div>
+            <div class="btn " id="" style="float: left;"></div>
+
+            <div class="btn " id="10" style="margin-left: 5%; float: left;">+</div>
+            <div class="btn " id="11" style="float: left;">-</div>
+            <div class="btn " id="c" style="float: left;">C</div>
+            <div class="btn " id="13" style="float: left;">=</div>
+
+            <div class="btn " id="1" style="margin-left: 5%; float: left;">1</div>
+            <div class="btn " id="2" style="float: left;">2</div>
+            <div class="btn " id="3" style="float: left;">3</div>
+            <div class="btn " id="14" style="float: left;">/</div>
+
+            <div class="btn  " id="4" style="margin-left: 5%; float: left;"> 4</div>
+            <div class="btn  " id="5" style="float: left;">5</div>
+            <div class="btn  " id="6" style="float: left;">6</div>
+            <div class="btn  " id="15" style="float: left;">*</div>
+
+            <div class="btn " id="7" style="margin-left: 5%; float: left;">7</div>
+            <div class="btn " id="8" style="float: left; ">8</div>
+            <div class="btn " id="9" style="float: left;">9</div>
+            <div class="btn " id="0" style="float: left;">0</div>
+
+            <div class="btn sci " id="sq" style="margin-left: 5%; float: left;">sq</div>
+            <div class="btn sci" id="cube" style="float: left; ">cube</div>
+            <div class="btn sci" id="dot" style="float: left;">.</div>
+            <div class="btn sci" id="sqrt" style="float: left;">sqrt</div>
+
+            <script>
+                var toggle = false
+                var operators = "+-/*"
+                var numbers = "0123456789"
+                var string = ""
+                var display = document.getElementById("display")
+            
+
+                var total = 0
+                document.getElementById("13").addEventListener("click",function(){
+                 if(string.includes("+")) {
+                     string = string.split("+")
+                     total = 0
+                     for(var ele of string){
+                        total = total + parseFloat(ele)
+                     }
+                 } 
+                 if(string.includes("-")) {
+                     string = string.split("-")
+                     total = string[0]
+                     for(var ele=1;ele<string.length;ele++){
+                        total = total - parseFloat(string[ele])
+                     }
+                 } 
+                  
+                 if(string.includes("*")) {
+                     string = string.split("*")
+                     total = 1
+                     for(var ele of string){
+                        total = total * parseFloat(ele)
+                     }
+                 } 
+
+                 if(string.includes("/")) {
+                     string = string.split("/")
+                     total = string[0]
+                     for(var ele=1;ele<string.length;ele++){
+                        total = total / parseFloat(string[ele])
+                     }
+                 }
+                 
+                 if(string.includes("^2")) {
+                     string = string.split("^2")
+                     total = string[0] * string[0]
+                    
+                 }
+                 if(string.includes("sqrt.")) {
+                     string = string.split("sqrt.")
+                     total =  Math.sqrt(string[1]) 
+                    
+                 }
+                 if(string.includes("^3")) {
+                     string = string.split("^3")
+                     total = string[0] * string[0] * string[0]                    
+                 }
+
+
+                  display.value=total
+                  string = ""
+                   
+                 })
+
+                
+
+                 document.getElementById("B").addEventListener("click",function(){ string = string.substring(0,string.length-1); display.value=string }) 
+                document.getElementById("c").addEventListener("click",function(){ string = ""; display.value=string })
+                document.getElementById("10").addEventListener("click",function(){
+                    if(string.length){ 
+                    if(operators.includes(string.charAt(string.length-1))) string = string.substring(0,string.length-1)
+                    string = string + "+";}
+                     display.value=string })
+                document.getElementById("11").addEventListener("click",function(){ 
+                    if(string.length){ 
+                    if(operators.includes(string.charAt(string.length-1))) string = string.substring(0,string.length-1)
+                    string = string + "-"; }display.value=string })
+                document.getElementById("14").addEventListener("click",function(){
+                    if(string.length){ 
+                    if(operators.includes(string.charAt(string.length-1))) string = string.substring(0,string.length-1)
+                    string = string + "/"; }display.value=string })
+                document.getElementById("15").addEventListener("click",function(){ 
+                    if(string.length){ 
+                    if(operators.includes(string.charAt(string.length-1))) string = string.substring(0,string.length-1)
+                    string = string + "*"; }display.value=string })
+                
+                
+                    document.getElementById("cube").addEventListener("click",function(){ string = string + "^3"; display.value=string })
+                document.getElementById("sqrt").addEventListener("click",function(){ string = string + "sqrt."; display.value=string })
+                document.getElementById("sq").addEventListener("click",function(){ string = string + "^2"; display.value=string })
+                document.getElementById("dot").addEventListener("click",function(){ string = string + "."; display.value=string })
+                document.getElementById("1").addEventListener("click",function(){ string = string + 1; display.value=string })
+                document.getElementById("2").addEventListener("click",function(){ string = string + 2; display.value=string })
+                document.getElementById("3").addEventListener("click",function(){ string = string + 3; display.value=string })
+                document.getElementById("4").addEventListener("click",function(){ string = string + 4; display.value=string })
+                document.getElementById("5").addEventListener("click",function(){ string = string + 5; display.value=string })
+                document.getElementById("6").addEventListener("click",function(){ string = string + 6; display.value=string })
+                document.getElementById("7").addEventListener("click",function(){ string = string + 7; display.value=string })
+                document.getElementById("8").addEventListener("click",function(){ string = string + 8; display.value=string })
+                document.getElementById("9").addEventListener("click",function(){ string = string + 9; display.value=string })
+                document.getElementById("0").addEventListener("click",function(){ string = string + 0; display.value=string })
+                
+            
+            </script>
+
+
+
+        </div>
+        
+    </body>
+</html>

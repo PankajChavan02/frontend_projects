@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <style>
+            .border{
+                background-color: lightskyblue;
+                font-weight: bold;
+                color: blue;
+                border: 3px solid brown;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+       <script>
+
+           function sub(){
+               console.log('clicked')
+               let string ="<h1>Personal Details: </h1><hr/>"
+             string = string +"<p> Full name : "+$("input[name='fname'").val()+"</P>"
+                string = string +"<p> address : "+$("input[name='Address'").val()+"</P>"
+                    string = string +"<p> Email : "+$("input[name='email'").val()+"</P>"
+                        string = string +"<p> Phone : "+$("input[name='phone'").val()+"</P>"
+                            string = string +"<p> Age : "+$("input[name='age'").val()+"</P>"
+                console.log(string)
+               $("div").append(string)
+               $("div").addClass("border")
+               
+           }
+
+          
+           
+       </script>
+    </head>
+    <body>
+        <div class="detail" >
+           
+        </div>       
+        <fieldset style="width: 40%;">
+            <legend >Form</legend>
+            <form>
+                Name:<input type="text" name="fname"  autofocus required><br/>
+                Address:<input type="text" name="Address" required><br/>
+                Email:<input type="email" name="email" required><br/>
+                Phone:<input type="tel" name="phone" ><br/>
+                Age:<input type="number" name="age" required><br/>
+                <input type="button" value="submit" onclick="sub()">
+            </form>
+        </fieldset>
+       
+        
+     
+
+    </body>
+</html>

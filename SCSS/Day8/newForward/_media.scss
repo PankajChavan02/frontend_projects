@@ -1,0 +1,8 @@
+@use "base" as d;
+@forward "_base";/* this statement makes content of -base as content of media in next file*/
+
+div{
+    height: d.$h;
+    width: d.$w;
+    border:d.$b;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 3</title>
+    </head>
+    <body>
+        <textarea id="inp" rows="8" cols="25" ></textarea>
+        <input id="add" type="submit" value="Add">
+        <input id="sum" type="submit" value="Sum">
+        <script>
+            var string
+            
+            document.getElementById("add").addEventListener("click",function(){
+                var data = document.getElementById("inp").value
+                
+                var string = new String(data)
+                var arr = string.split(" ")
+                var array = arr.filter(d=> parseInt(d)>15)
+                alert(array)
+                var total = 0
+                for(var i of array){
+                    
+                    total = total + parseInt(i)
+                }
+               alert(total)
+                sessionStorage.setItem("sum",total)            
+                
+            })
+
+            document.getElementById("sum").addEventListener("click",function(){
+                alert(sessionStorage.getItem("sum"))
+                sessionStorage.removeItem("sum")
+                
+            })
+        </script>
+
+
+        
+    </body>
+</html>

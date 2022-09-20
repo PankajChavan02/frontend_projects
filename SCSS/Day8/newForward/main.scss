@@ -1,0 +1,9 @@
+@use "media" as d;
+
+
+div{
+    color: d.$color;
+    background-color: d.$bg; 
+    font-size: 50px;
+    
+}

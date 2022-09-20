@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Demo File</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+ 
+  <script>
+
+    $(document).ready(function(){
+      $("#submit-btn").click(function(){
+        console.log("btn clicked")
+        $("#fname").css("backgrond-color","yellow")
+      })
+    })
+  </script>
+</head>
+<body>
+
+  <div class="container">
+    <fieldset style="border: 1px solid black; padding: 1%;">
+          <form action="https://www.google.com" class="needs-validation" novalidate>
+      <div class="form-group row">
+        <div class="col">
+        <label>First Name:</label>
+        <input class="form-control" type="text" id="fname" required>
+        <div class="invalid-feedback">Please fill out this </div>
+        <div class="valid-feedback">valid </div>
+      </div>
+
+      <div class="col">
+        <label>Email:</label>
+        <input class="form-control"  type="email" required pattern="*.@.*.com" id="lname">
+      </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-md-4">
+          <label>Gender</label>
+          <input class="form-control" type="text" id="gender">
+        </div>
+
+        <div class="col-md-4">
+          <label>Email address</label>
+          <input class="form-control" type="email" id="gender">
+        </div>
+
+        <div class="col-md-4">
+          <label>Mobile number</label>
+          <input class="form-control" type="tel" id="gender">
+        </div>
+      </div>
+
+      
+        <div class="form-group row ">
+          <div class="col-md-3 ">
+          <label>Mandetory skills</label>
+
+          <div class="row">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" >
+            <label class="form-check-label" for="flexRadioDisabled">
+              HTML5
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" required type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled">
+            <label class="form-check-label" for="flexRadioCheckedDisabled">
+              JAVA
+            </label>
+          </div>
+
+          <div class="valid-feedback">Valid</div>
+          <div class="invalid-feedback">Please check</div>
+        </div>
+
+
+        </div>
+        </div>
+
+        <div class="form-control">
+          <button id="submit-btn" class="btn btn-primary">submit</button>
+        </div>
+       
+    </form>
+  </fieldset>
+
+  </div>
+   
+
+   
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+console.log("hey this should work man")
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+  </script>
+    
+    
+</body>
+</html>

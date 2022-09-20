@@ -1,0 +1,87 @@
+@mixin f1($h:300px,$w:30%) {
+    height: $h;
+    width: $w;
+    background-color: lightskyblue;        
+    float: left;
+    margin: 1%;
+    font-size: 40px;
+    color: lightseagreen;
+    
+}
+
+@mixin cont{
+    height: 320px;
+    width: 800px;
+    
+    margin-top: 5%;
+    border: 1px solid blue;
+    float: none;
+    
+     
+}
+.theme-1{
+    @include cont();
+    background-color: yellowgreen
+    
+}
+.theme-2{
+    @include cont();
+   
+     background-color: lightpink;
+
+}
+
+.theme-3{
+    @include cont();
+   
+}
+
+.left{
+    @include f1(300px,66%);
+    background-color: grey;
+}
+
+.right{
+    @include f1;
+    background-color: lightgrey;  
+    position: relative;
+   
+    background-color: lightgrey;
+}
+
+.left1{
+    @include f1(300px,66%);
+    color: yellow;
+    background-color: lightsalmon;
+}
+
+.right1{
+    @include f1;
+    position: relative;
+    color: yellow;
+    background-color: salmon ;
+}
+
+.left4{
+    @include f1(300px,66%);
+    color: blue;
+    background-color: lightblue;
+}
+
+.right4{
+    @include f1;
+    position: relative;
+    color: blue;
+    background-color: lightblue ;
+}
+
+.button {
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: bold;
+    
+    background-color: greenyellow;
+    
+}

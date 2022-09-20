@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jquery assignment</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script>
+           
+
+            $(document).ready(function(){
+                $('div:contains("Welcome")').css("color","red");
+            });
+
+            $(document).ready(function(){
+                $("ul li:first-child").css("color","pink");
+                $('a[target="_blank"').css("color","green");
+
+                let color = $("a").css("color");
+                alert(color);
+            });
+           
+        </script>
+    </head>
+    <body>
+        <div>This is first div element</div>
+        <div>Welcome home second div</div>
+        <div>This is third div element</div>
+        <div>This is fourth div element</div>
+        <a href="" target="_blank">blank</a>
+        <a href="" >Home</a>
+        <a href="" target="_blank">blank</a>
+        <a href="" >History</a>
+        <ul>
+            <li>first li element</li>
+            <li>Second li element</li>
+            <li>third element</li>
+        </ul>
+        <ul>
+            <li>first li element</li>
+            <li>Second li element</li>
+            <li>third element</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RDW page</title>     
+        <style>
+          div{
+               height: 400px;
+               width: 500px;
+               background-color: yellow;
+           }              
+           @media only screen and (min-width:601px) {
+               body{
+                   font-size: 50px;
+                   background-color: burlywood;
+               }
+               p{
+                display: none;
+           }
+               
+           }
+
+           @media only screen and (min-width:900px) {
+               body{
+                   font-size: 50px;
+                   background-color: lightgreen;
+               }
+
+               div{
+                   background-color: blue;
+               }
+
+               p{
+                display: none;
+           }
+               
+           }
+
+           @media only screen and (min-width:1200px) {
+               body{
+                   font-size: 30px;
+                   background-color: lightgreen;
+               }
+
+               div{
+                   background-color: red;
+               }
+
+               p{
+               display: none;
+           }
+              
+           
+
+               
+           }
+
+           @media only screen and (max-width:600px) {
+            body{
+                   font-size: 20px;
+                   background-color: lightskyblue;
+               }
+               div{
+                visibility: hidden;
+               }
+               p{
+                   visibility: visible;
+               }   
+                       
+           }
+        </style>   
+       
+    </head>
+    <body>
+        <div>    
+        <p>This paragraph is only visible to small screen
+            This paragraph is only visible to small screen               
+        </p>
+    </div>           
+    </body>
+</html>

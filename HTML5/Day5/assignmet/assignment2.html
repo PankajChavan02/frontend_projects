@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 2</title>
+        
+    </head>
+    <body>
+        <form>
+            <h2>Name</h2><input class="ip" id="username"  type="text"  >
+            <h2>Password</h2><input id="pwd"  class="ip" type="password" ><br/><br/>
+            <input id="btn" type="submit" onsubmit="submit()">
+        </form>
+
+        <script>
+            document.getElementById("username").addEventListener("mouseover",function(){ 
+                document.getElementById("username").style.backgroundColor="yellow"})
+                document.getElementById("pwd").addEventListener("mouseover",function(){ 
+                document.getElementById("pwd").style.backgroundColor="yellow"})
+
+                document.getElementById("username").addEventListener("mouseout",function(){ 
+                document.getElementById("username").style.backgroundColor="white"})
+                document.getElementById("pwd").addEventListener("mouseout",function(){ 
+                document.getElementById("pwd").style.backgroundColor="white"})
+
+            document.getElementById("btn").addEventListener("click",function(){
+                var username = document.getElementById("username").value
+                if(username != "admin") alert("Invalid username")
+                else{
+                var pwd = document.getElementById("pwd").value
+                if(pwd != "admin") alert("Invalid pwd")    
+                else
+                alert("Valid credentials")        
+            }
+            })
+        </script>
+        
+    </body>
+</html>

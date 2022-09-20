@@ -1,0 +1,26 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas Linear Gradient</title>
+    </head>
+    <body>
+        <canvas id="myCanvas" height="500px" width="700px">
+
+
+        </canvas>
+        <script>
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+
+            var gradient = ctx.createLinearGradient(20,0,220,0);
+            gradient.addColorStop(0,"gold");
+            gradient.addColorStop(0.5,"orange");
+            gradient.addColorStop(1,"red");
+            ctx.fillStyle = gradient;
+            ctx.fillRect(20,0,200,100);
+        </script>
+        
+    </body>
+</html>

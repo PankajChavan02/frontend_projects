@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <style>
+          .main {
+              margin-left: 30%;
+              margin-right: 30%;
+              height: 469px;
+              border: 1px solid black;
+          }
+          .left{
+              margin: 1%;
+              width: 49%;
+              float: left;
+              margin: 1px;
+              border: 1px solid black;
+          }
+          .right{
+            margin: 1%;
+            width: 49%;
+            float: left;
+            margin: 1px;
+              border: 1px solid black;
+          }
+          textarea:hover{
+            background-color: lightskyblue;
+          }
+          input:hover{
+              background-color: lightskyblue;
+          }
+         
+
+          
+        </style>
+        <script>
+            function fun(){
+                
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align: center;margin: 1%;">Registration Form</h1>
+        <form action="successfull.html">
+        <div class="main">
+            <div class="left">
+                Employee ID:
+            </div>
+            <div class="right">
+                <input type="number" min="10001" max="15000" required autofocus style=" width: 30%;" >
+            </div>
+
+            <div class="left">
+                First Name:
+            </div>
+            <div class="right">
+                <input type="text" pattern="[a-zA-Z]{3,15}" placeholder="First Name">
+            </div>
+            <div class="left">
+                Last Name:
+            </div>
+            <div class="right">
+                <input type=" text" pattern="[a-zA-Z]{3,15}" minlength="5" maxlength="25" placeholder="Last Name">
+            </div>
+            <div class="left" style="height: 79px;">
+                Department:
+            </div>
+            <div class="right">
+                <input required type="radio" name="dept" >IT<br/>
+                <input type="radio" name="dept" >HR<br/>
+                <input type="radio" name="dept" >Finance<br/>
+                <input type="radio" name="dept" >Admin
+            </div>
+            <div class="left">
+                Date of joining:
+            </div>
+            <div class="right">
+                <input type="date" max="2021-08-18" >
+            </div>
+            <div class="left">
+                Email:
+            </div>
+            <div class="right">
+                <input type="email" pattern="^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$"">
+            </div>
+            <div class="left">
+                Contact:
+            </div>
+            <div class="right">
+                <input type="tel" pattern="[1-9]1.[0-9]{9}" >
+            </div>
+            <div class="left" style="height: 110px;">
+                Address:
+            </div>
+            <div class="right" >
+                <textarea rows="7" style="resize: none;" cols="30"></textarea>
+            </div>
+
+
+            
+            <div class="left" style="height: 79px;">
+                Training Programs to be attended
+            </div>
+            <div class="right">
+                <input required type="checkbox" name="dept" >Web Basics<br/>
+                <input type="checkbox" name="dept" >C#<br/>
+                <input type="checkbox" name="dept" >Entry Framework<br/>
+                <input type="checkbox" name="dept" >ASP .NET MVC
+            </div>
+            <div class="left" >
+                <h1></h1>
+            </div>
+            <div class="right" >
+                <input type="submit" value="submit" >
+                <input type="reset" value="cancel" onclick="fun()" >
+               </div>
+        </div>
+    </form>
+    
+    </body>
+</html>
